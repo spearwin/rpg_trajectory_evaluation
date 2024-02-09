@@ -41,9 +41,9 @@ if __name__ == '__main__':
     parser.add_argument('bag', help='Bagfile')
     parser.add_argument('topic', help='Topic')
     parser.add_argument('--msg_type', default='PoseStamped',
-                        help='message type')
-    parser.add_argument('--output', default='stamped_poses.txt',
-                        help='output filename')
+                        help='message type (default: PoseStamped)')
+    parser.add_argument('--output', default='stamped_groundtruth.txt',
+                        help='output filename (default: <current_directory>/stamped_groundtruth.txt)')
     args = parser.parse_args()
 
     out_dir = os.path.dirname(os.path.abspath(args.bag))
