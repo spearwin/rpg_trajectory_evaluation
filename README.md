@@ -41,7 +41,7 @@ Zichao Zhang, Davide Scaramuzza: A Tutorial on Quantitative Trajectory Evaluatio
 
 ## Install
 The package is written in python and tested in Ubuntu 16.04 and 18.04.
-Currently only `python2` is supported.
+Currently only `python3` is supported.
 The package can be used as a ROS package as well as a standalone tool.
 To use it as a ROS package, simply clone it into your workspace.
 It only depends on [`catkin_simple`](https://github.com/catkin/catkin_simple) to build.
@@ -115,7 +115,7 @@ rosrun rpg_trajectory_evaluation analyze_trajectory_single.py <result_folder>
 or as a standalone package, run
 
 ```
-python2 analyze_trajectory_single.py <result_folder> 
+python3 analyze_trajectory_single.py <result_folder> 
 ```
 
 `<result_folder>` should contain the groundtruth, trajectory estimate and optionally the evaluation configuration as mentioned above.
@@ -132,7 +132,7 @@ For multiple trials, the result for trial `n` will have the corresponding suffix
 
 As an example, after executing:
 ```
-python2 scripts/analyze_trajectory_single.py results/euroc_mono_stereo/laptop/vio_mono/laptop_vio_mono_MH_05
+python3 scripts/analyze_trajectory_single.py results/euroc_mono_stereo/laptop/vio_mono/laptop_vio_mono_MH_05
 ```
 you will find the following in `plots`:
 
@@ -164,7 +164,7 @@ rosrun rpg_trajectory_evaluation analyze_trajectories.py \
 otherwise, run
 
 ```
-python2 scripts/analyze_trajectories.py \
+python3 scripts/analyze_trajectories.py \
   euroc_vislam_mono.yaml --output_dir=./results/euroc_vislam_mono --results_dir=./results/euroc_vislam_mono --platform laptop --odometry_error_per_dataset --plot_trajectories --rmse_table --rmse_boxplot --mul_trials=10
 ```
 
